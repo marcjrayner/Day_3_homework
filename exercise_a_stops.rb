@@ -1,12 +1,51 @@
 stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
 
+
 # 1. Add `"Edinburgh Waverley"` to the end of the array
+
+stops.push("Edinburgh Waverley")
+p stops
+
 # 2. Add `"Glasgow Queen St"` to the start of the array
+
+stops.unshift("Glasgow Queen St")
+p stops
+
 # 3. Add `"Polmont"` at the appropriate point (between `"Falkirk High"` and `"Linlithgow"`)
-# 4. Work out the index position of `"Linlithgow"`
-# 5. Remove `"Livingston"` from the array using its name
-# 6. Delete `"Cumbernauld"` from the array by index
-# 7. How many stops there are in the array?
-# 8. How many ways can we return `"Falkirk High"` from the array?
-# 9. Reverse the positions of the stops in the array
-# 10. Print out all the stops using a for loop
+#
+stops.insert(4, "Polmont")
+p stops
+#
+# # 4. Work out the index position of `"Linlithgow"`
+#
+p stops.index("Linlithgow")
+#
+# # 5. Remove `"Livingston"` from the array using its name
+#
+stops.delete("Livingston")
+p stops
+#
+# # 6. Delete `"Cumbernauld"` from the array by index
+#
+stops.delete_at(2)
+p stops
+#
+#
+# # 7. How many stops there are in the array?
+# There are 7 stops at this point, line 35
+#
+p stops.length()
+#
+# # 8. How many ways can we return `"Falkirk High"` from the array?
+#
+p stops[2]
+#
+# # 9. Reverse the positions of the stops in the array
+#
+p stops.reverse()
+#
+# # 10. Print out all the stops using a for loop
+#
+for stop in stops
+  p stop
+end
