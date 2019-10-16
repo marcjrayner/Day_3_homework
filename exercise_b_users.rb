@@ -55,12 +55,53 @@ users = {
 }
 
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+p users["Jonathan"][:twitter]
+
 # 2. Get Erik's hometown
+p users["Erik"][:home_town]
+
 # 3. Get the array of Erik's lottery numbers
+p users["Erik"][:lottery_numbers]
+
 # 4. Get the type of Avril's pet Monty
+p users["Avril"][:pets]
+
 # 5. Get the smallest of Erik's lottery numbers
+lotto = users["Erik"][:lottery_numbers]
+p lotto.min()
+
+
 # 6. Return an array of Avril's lottery numbers that are even
+lotto2 = users["Avril"][:lottery_numbers]
+for num in lotto2
+  if num % 2 == 0
+    p num
+  end
+end
+
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
+lotto << 7
+p lotto
+
 # 8. Change Erik's hometown to Edinburgh
+users["Erik"][:home_town] = "Edinburgh"
+p users["Erik"][:home_town]
+
 # 9. Add a pet dog to Erik called "Fluffy"
+users["Erik"][:pets].push({:name => "Fluffy", :species => "dog"})
+p users["Erik"][:pets]
+
 # 10. Add another person to the users hash
+users["Jimothy"] = {
+  :twitter => "jimothy",
+  :lottery_numbers => [4, 8, 15, 16, 23, 42],
+  :home_town => "LA",
+  :pets => [
+  {
+    :name => "Vincent",
+    :species => "Golden Labrador"
+  }
+]
+}
+
+p users
